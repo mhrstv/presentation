@@ -29,7 +29,7 @@ skinparam arrow {
     Thickness 1
 }
 package SampleApp.Interfaces {
-interface IEmployee <<Clickable>> [[file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Interfaces/IEmployee.cs]] {
+interface IEmployee <<Clickable>> [[file:///D:/Projects/presentation/SampleApp/SampleApp/Interfaces/IEmployee.cs]] {
     + EmployeeId : string
     + Salary : decimal
     + CalculateYearlyBonus()
@@ -37,21 +37,27 @@ interface IEmployee <<Clickable>> [[file:///home/runner/work/presentation/presen
 
 }
 package SampleApp.Models {
-class Employee <<Clickable>> [[file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Employee.cs]] {
-    + EmployeeId : string
-    + Department : Department
-    + Salary : decimal
-    + CalculateYearlyBonus() : decimal
-}
-
-class Address <<Clickable>> [[file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Address.cs]] {
+class Address <<Clickable>> [[file:///D:/Projects/presentation/SampleApp/SampleApp/Models/Address.cs]] {
     + Street : string
     + City : string
     + State : string
     + ZipCode : string
 }
 
-class Person <<Clickable>> [[file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Person.cs]] {
+class Department <<Clickable>> [[file:///D:/Projects/presentation/SampleApp/SampleApp/Models/Department.cs]] {
+    + Name : string
+    + Manager : Employee
+    + Employees : List<Employee>
+}
+
+class Employee <<Clickable>> [[file:///D:/Projects/presentation/SampleApp/SampleApp/Models/Employee.cs]] {
+    + EmployeeId : string
+    + Department : Department
+    + Salary : decimal
+    + CalculateYearlyBonus() : decimal
+}
+
+class Person <<Clickable>> [[file:///D:/Projects/presentation/SampleApp/SampleApp/Models/Person.cs]] {
     - _id : string
     + FirstName : string
     + LastName : string
@@ -60,15 +66,9 @@ class Person <<Clickable>> [[file:///home/runner/work/presentation/presentation/
     + GetFullName() : string
 }
 
-class Department <<Clickable>> [[file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Department.cs]] {
-    + Name : string
-    + Manager : Employee
-    + Employees : List<Employee>
-}
-
 }
 package SampleApp.Services {
-class EmployeeService <<Clickable>> [[file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Services/EmployeeService.cs]] {
+class EmployeeService <<Clickable>> [[file:///D:/Projects/presentation/SampleApp/SampleApp/Services/EmployeeService.cs]] {
     - _employees : List<Employee>
     - _department : Department
     + AddEmployee() : void
@@ -80,8 +80,8 @@ class EmployeeService <<Clickable>> [[file:///home/runner/work/presentation/pres
 ' Relationships
 Employee --|> Person
 Employee --|> IEmployee
+Department --> Employee : has
 Employee --> Department : has
 Person --> Address : has
-Department --> Employee : has
 EmployeeService --> Department : has
 @enduml
