@@ -1,0 +1,87 @@
+@startuml
+' Configuration
+hide empty members
+skinparam shadowing false
+skinparam handwritten false
+skinparam monochrome false
+skinparam linetype ortho
+skinparam class {
+    BackgroundColor<<Clickable>> #E3F2FD
+    BorderColor<<Clickable>> #1976D2
+    HeaderBackgroundColor<<Clickable>> #BBDEFB
+    FontSize 12
+    AttributeFontSize 11
+    AttributeFontColor #333333
+    BorderThickness 1
+}
+skinparam interface {
+    BackgroundColor<<Clickable>> #F1F8E9
+    BorderColor<<Clickable>> #689F38
+    HeaderBackgroundColor<<Clickable>> #DCEDC8
+    FontSize 12
+    AttributeFontSize 11
+    AttributeFontColor #333333
+    BorderThickness 1
+}
+skinparam arrow {
+    Color #666666
+    FontSize 11
+    Thickness 1
+}
+package SampleApp.Interfaces {
+interface IEmployee <<Clickable>> [[file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Interfaces/IEmployee.cs]] {
+    + EmployeeId : string
+    + Salary : decimal
+    + CalculateYearlyBonus()
+}
+
+}
+package SampleApp.Models {
+class Employee <<Clickable>> [[file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Employee.cs]] {
+    + EmployeeId : string
+    + Department : Department
+    + Salary : decimal
+    + CalculateYearlyBonus() : decimal
+}
+
+class Address <<Clickable>> [[file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Address.cs]] {
+    + Street : string
+    + City : string
+    + State : string
+    + ZipCode : string
+}
+
+class Person <<Clickable>> [[file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Person.cs]] {
+    - _id : string
+    + FirstName : string
+    + LastName : string
+    + Age : int
+    + HomeAddress : Address
+    + GetFullName() : string
+}
+
+class Department <<Clickable>> [[file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Department.cs]] {
+    + Name : string
+    + Manager : Employee
+    + Employees : List<Employee>
+}
+
+}
+package SampleApp.Services {
+class EmployeeService <<Clickable>> [[file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Services/EmployeeService.cs]] {
+    - _employees : List<Employee>
+    - _department : Department
+    + AddEmployee() : void
+    + GetEmployeeById() : Employee
+}
+
+}
+
+' Relationships
+Employee --|> Person
+Employee --|> IEmployee
+Employee --> Department : has
+Person --> Address : has
+Department --> Employee : has
+EmployeeService --> Department : has
+@enduml

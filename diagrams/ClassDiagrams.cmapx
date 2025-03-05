@@ -1,0 +1,8 @@
+<map id="ClassDiagrams_map" name="ClassDiagrams_map">
+<area shape="rect" id="id1" href="file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Address.cs" title="file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Address.cs" alt="" coords="275,447,394,544"/>
+<area shape="rect" id="id2" href="file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Interfaces/IEmployee.cs" title="file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Interfaces/IEmployee.cs" alt="" coords="38,261,195,353"/>
+<area shape="rect" id="id3" href="file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Department.cs" title="file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Department.cs" alt="" coords="452,265,645,349"/>
+<area shape="rect" id="id4" href="file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Services/EmployeeService.cs" title="file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Services/EmployeeService.cs" alt="" coords="702,59,902,164"/>
+<area shape="rect" id="id5" href="file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Person.cs" title="file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Person.cs" alt="" coords="252,242,417,372"/>
+<area shape="rect" id="id6" href="file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Employee.cs" title="file:///home/runner/work/presentation/presentation/SampleApp/SampleApp/Models/Employee.cs" alt="" coords="303,59,516,164"/>
+</map>
