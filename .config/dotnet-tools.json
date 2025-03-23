@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "kodify.cli": {
+      "version": "0.0.1-dev-0003",
+      "commands": [
+        "kodify"
+      ],
+      "rollForward": false
+    }
+  }
+}
