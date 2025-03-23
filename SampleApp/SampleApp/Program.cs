@@ -5,7 +5,7 @@ using Kodify.Extensions.Diagrams;
 using Kodify.DevOps.IaC;
 using Kodify.DevOps.Pipeline;
 
-// Initialize AI service (OpenAI)
+// Initialize AI service
 var aiConfig = new OpenAIConfig 
 { 
     ApiKey = "",
