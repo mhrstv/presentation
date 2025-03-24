@@ -13,7 +13,7 @@ var aiConfig = new OpenAIConfig
 };
 var aiService = new OpenAIService(aiConfig);
 
-// Showcase of README and CHANGELOG generation
+// Showcase README and CHANGELOG generation
 var markdownGenerator = new MarkdownGenerator(aiService);
 await markdownGenerator.GenerateReadMeAsync(
     "Kodify Sample",
