@@ -1,6 +1,9 @@
 # Changelog
 
 ## Unreleased
+- **test: add changelog**  
+  *Commit: daac717 | Date: 2025-03-31 | Author: Martin Hristov*  
+
 - **remove files to setup project for presentation**  
   *Commit: 2b4547c | Date: 2025-03-24 | Author: Martin Hristov*  
 
